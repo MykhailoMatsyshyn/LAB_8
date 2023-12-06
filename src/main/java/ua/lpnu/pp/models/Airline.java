@@ -1,8 +1,6 @@
 package ua.lpnu.pp.models;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -16,6 +14,10 @@ public class Airline {
      */
     public Airline() {
         aircrafts = new ArrayList<>();
+    }
+
+    public Airline(List<Aircraft> initialAircrafts) {
+        this.aircrafts = new ArrayList<>(initialAircrafts);
     }
 
     /**

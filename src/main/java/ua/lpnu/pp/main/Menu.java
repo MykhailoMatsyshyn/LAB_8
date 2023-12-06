@@ -1,5 +1,6 @@
 package ua.lpnu.pp.main;
 
+import lombok.Data;
 import ua.lpnu.pp.commands.*;
 import ua.lpnu.pp.models.Airline;
 
@@ -7,12 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+@Data
 public class Menu {
-        public void displayMenu() {
+    private int choice;
+
+    public void displayMenu() {
             CommandInvoker commandInvoker = new CommandInvoker();
             Airline airline = new Airline();
             Scanner scanner = new Scanner(System.in);
-            int choice;
 
             Map<Integer, Command> commands = new HashMap<>();
             commands.put(1, new AddPlaneCommand(airline));

@@ -30,11 +30,11 @@ public class SearchByFuelConsumptionCommand implements Command {
 
         System.out.println("Введіть мінімальне значення споживання пального:");
         System.out.print("» ");
-        double minFuelConsumption = scanner.nextDouble();
+        double minFuelConsumption = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Введіть максимальне значення споживання пального:");
         System.out.print("» ");
-        double maxFuelConsumption = scanner.nextDouble();
+        double maxFuelConsumption = Double.parseDouble(scanner.nextLine());
 
         List<Aircraft> foundAircrafts = airline.findAircraftsByFuelConsumption(minFuelConsumption, maxFuelConsumption);
 
@@ -43,7 +43,7 @@ public class SearchByFuelConsumptionCommand implements Command {
                     " до " + maxFuelConsumption + ":");
 
             for (Aircraft aircraft : foundAircrafts) {
-                System.out.println("Назва: " + aircraft.getModel() + "\nСерійний номер: " + aircraft.getSerialNumber() +
+                System.out.println("Назва: " + aircraft.getManufacturer() + "\nСерійний номер: " + aircraft.getSerialNumber() +
                         "\n - Пального споживає: " + aircraft.getFuelConsumption());
             }
         } else {
@@ -59,5 +59,9 @@ public class SearchByFuelConsumptionCommand implements Command {
     @Override
     public String getDescription() {
         return "Пошук за параметрами споживання пального";
+    }
+
+    public Airline getAirline() {
+        return airline;
     }
 }

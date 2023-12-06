@@ -2,7 +2,6 @@ package ua.lpnu.pp.commands;
 
 import ua.lpnu.pp.models.Aircraft;
 import ua.lpnu.pp.models.Airline;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -20,6 +19,10 @@ public class SortByFlightRangeCommand implements Command {
      */
     public SortByFlightRangeCommand(Airline airline) {
         this.airline = airline;
+    }
+
+    public Airline getAirline() {
+        return airline;
     }
 
     /**

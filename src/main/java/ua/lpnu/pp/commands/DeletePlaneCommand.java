@@ -2,7 +2,6 @@ package ua.lpnu.pp.commands;
 
 import ua.lpnu.pp.models.Aircraft;
 import ua.lpnu.pp.models.Airline;
-import ua.lpnu.pp.models.Airline;
 
 import java.util.Iterator;
 import java.util.Scanner;
