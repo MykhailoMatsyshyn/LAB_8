@@ -1,7 +1,7 @@
 # LAB_8
 
 <p align="center">
-  <img src="https://github.com/MykhailoMatsyshyn/LAB_7/assets/132977585/28c04293-fe7e-4686-beb9-ad271a2479c2" alt="image">
-   <img src="https://github.com/MykhailoMatsyshyn/LAB_7/assets/132977585/65af2afb-adeb-4dd0-a1fa-6d649d01b53b" alt="image">
+  <img src="![image](https://github.com/MykhailoMatsyshyn/LAB_8/assets/132977585/895f6334-0707-492d-b9fd-2220be576cd2)
+" alt="image">
 </p>
 
