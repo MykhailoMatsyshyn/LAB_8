@@ -4,12 +4,14 @@ import ua.lpnu.pp.models.Aircraft;
 import ua.lpnu.pp.models.Airline;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Команда для додавання літака до авіакомпанії.
  */
 public class AddPlaneCommand implements Command {
     private Airline airline;
+    private static final Logger logger = Logger.getLogger(AddPlaneCommand.class.getName());
 
     /**
      * Конструктор, що приймає авіакомпанію.
@@ -25,6 +27,7 @@ public class AddPlaneCommand implements Command {
      */
     @Override
     public void execute() {
+        logger.info("=== Виконання команди створення літака ===");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть виробника:");
         String manufacturer = scanner.nextLine();
@@ -40,6 +43,7 @@ public class AddPlaneCommand implements Command {
         Aircraft newAircraft = new Aircraft(manufacturer, model, serialNumber, capacity, cargoCapacity, fuelConsumption, flightRange);
         airline.addAircraft(newAircraft);
         System.out.println("\n\u001B[32mЛітак успішно додано до авіакомпанії.\u001B[0m");
+        logger.info("Літак успішно додано до авіакомпанії.");
     }
 
     /**
@@ -52,18 +56,22 @@ public class AddPlaneCommand implements Command {
     public int readValidInteger(Scanner scanner, String prompt) {
         int value;
         while (true) {
+            logger.info("Зчитування цілого числа: " + prompt);
             System.out.println(prompt);
+
             try {
                 value = Integer.parseInt(scanner.nextLine());
                 if (value <= 0 || value >= 1000) {
-                    throw new IllegalArgumentException("\u001B[31mМісткість має бути більше 0 та менше 1000\u001B[0m");
+                    throw new IllegalArgumentException("Місткість має бути більше 0 та менше 1000");
                 }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("\u001B[31mБудь ласка, введіть числове значення.\u001B[0m");
+                logger.severe("Помилка у введення числа: " + e.getMessage() + ". Введіть ще раз.");
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
-            }
+                logger.severe("Помилка у введення числа: " + e.getMessage() + ". Введіть ще раз.");
+          }
         }
         return value;
     }
@@ -78,21 +86,26 @@ public class AddPlaneCommand implements Command {
     public double readValidDouble(Scanner scanner, String prompt) {
         double value;
         while (true) {
+            logger.info("Зчитування дійсного числа: " + prompt);
             System.out.println(prompt);
+
             try {
                 value = Double.parseDouble(scanner.nextLine());
                 if (value <= 0) {
-                    throw new IllegalArgumentException("\u001B[31mЗначення має бути додатнім\u001B[0m");
+                    throw new IllegalArgumentException("Значення має бути додатнім");
                 }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("\u001B[31mБудь ласка, введіть числове значення.\u001B[0m");
+                logger.severe("Помилка введення числа: " + e.getMessage() + ". Введіть ще раз.");
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
+                logger.severe("Помилка введення числа: " + e.getMessage() + ". Введіть ще раз.");
             }
         }
         return value;
     }
+
 
     /**
      * Повертає опис команди.
