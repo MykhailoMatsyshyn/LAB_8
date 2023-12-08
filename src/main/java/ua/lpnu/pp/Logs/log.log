@@ -1,0 +1,59 @@
+INFO: === Виконання меню ===
+груд. 08, 2023 8:45:06 ПП ua.lpnu.pp.main.Menu displayMenu
+WARNING: Некоректна дія.  Спробуйте ще раз.
+груд. 08, 2023 8:45:09 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Вибрана операція: 1
+груд. 08, 2023 8:45:09 ПП ua.lpnu.pp.commands.AddPlaneCommand execute
+INFO: === Виконання команди створення літака ===
+груд. 08, 2023 8:45:32 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidInteger
+INFO: Зчитування цілого числа: Введіть місткість:
+груд. 08, 2023 8:45:36 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть вантажопідйомність:
+груд. 08, 2023 8:45:41 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+SEVERE: Помилка введення числа: Значення має бути додатнім. Введіть ще раз.
+груд. 08, 2023 8:45:53 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть вантажопідйомність:
+груд. 08, 2023 8:46:50 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть споживання пального:
+груд. 08, 2023 8:46:58 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть дальність польоту:
+груд. 08, 2023 8:47:02 ПП ua.lpnu.pp.commands.AddPlaneCommand execute
+INFO: Літак успішно додано до авіакомпанії.
+груд. 08, 2023 8:47:07 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Вибрана операція: 1
+груд. 08, 2023 8:47:07 ПП ua.lpnu.pp.commands.AddPlaneCommand execute
+INFO: === Виконання команди створення літака ===
+груд. 08, 2023 8:47:28 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidInteger
+INFO: Зчитування цілого числа: Введіть місткість:
+груд. 08, 2023 8:47:32 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть вантажопідйомність:
+груд. 08, 2023 8:47:37 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть споживання пального:
+груд. 08, 2023 8:47:40 ПП ua.lpnu.pp.commands.AddPlaneCommand readValidDouble
+INFO: Зчитування дійсного числа: Введіть дальність польоту:
+груд. 08, 2023 8:47:44 ПП ua.lpnu.pp.commands.AddPlaneCommand execute
+INFO: Літак успішно додано до авіакомпанії.
+груд. 08, 2023 8:47:56 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Вибрана операція: 3
+груд. 08, 2023 8:47:56 ПП ua.lpnu.pp.commands.ListPlanesCommand execute
+INFO: === Виконання команди виведення інформації про літаки ===
+груд. 08, 2023 8:47:56 ПП ua.lpnu.pp.commands.ListPlanesCommand execute
+INFO: Список виведено
+груд. 08, 2023 8:48:01 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Вибрана операція: 5
+груд. 08, 2023 8:48:01 ПП ua.lpnu.pp.commands.SortByFlightRangeCommand execute
+INFO: === Виконання команди сортування за дальністю польоту ===
+груд. 08, 2023 8:48:03 ПП ua.lpnu.pp.commands.SortByFlightRangeCommand execute
+INFO: Сортування за спаданням дальності польоту
+груд. 08, 2023 8:48:08 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Вибрана операція: 6
+груд. 08, 2023 8:48:08 ПП ua.lpnu.pp.commands.SearchByFuelConsumptionCommand execute
+INFO: === Виконання команди пошуку літаків за параметрами споживання пального ===
+груд. 08, 2023 8:48:10 ПП ua.lpnu.pp.commands.SearchByFuelConsumptionCommand execute
+INFO: Введене мінімальне значення споживання пального: 1.0
+груд. 08, 2023 8:48:12 ПП ua.lpnu.pp.commands.SearchByFuelConsumptionCommand execute
+INFO: Введене максимальне значення споживання пального: 10.0
+груд. 08, 2023 8:48:12 ПП ua.lpnu.pp.commands.SearchByFuelConsumptionCommand execute
+WARNING: Літаків зі споживанням пального в заданому діапазоні не знайдено.
+груд. 08, 2023 8:48:15 ПП ua.lpnu.pp.main.Menu displayMenu
+INFO: Програма завершена.

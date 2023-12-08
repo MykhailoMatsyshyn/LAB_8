@@ -7,12 +7,15 @@ import ua.lpnu.pp.models.Airline;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 @Data
 public class Menu {
     private int choice;
+    private static final Logger logger = Logger.getLogger(Menu.class.getName());
 
     public void displayMenu() {
+            logger.info("=== Виконання меню ===");
             CommandInvoker commandInvoker = new CommandInvoker();
             Airline airline = new Airline();
             Scanner scanner = new Scanner(System.in);
@@ -37,11 +40,14 @@ public class Menu {
                 System.out.println(" ");
 
                 if (commands.containsKey(choice)) {
+                    logger.info("Вибрана операція: " + choice);
                     commandInvoker.executeCommand(commands.get(choice));
                 } else if (choice == 0) {
+                    logger.info("Програма завершена.");
                     System.out.println("Програма завершена.");
                 } else {
                     System.out.println("Не правильно введено. Спробуйте ще раз.");
+                    logger.warning("Некоректна дія.  Спробуйте ще раз.");
                 }
             } while (choice != 0);
         }

@@ -7,8 +7,11 @@
 
 package ua.lpnu.pp.main;
 
+import ua.lpnu.pp.Logs.LoggerSetup;
+
 public class AirlineManagementSystem {
     public static void main(String[] args) {
+        LoggerSetup.setupLogger();
         Menu menu = new Menu();
         menu.displayMenu();
     }
